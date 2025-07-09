@@ -6,7 +6,7 @@ export default function Home() {
       
       {/* Background Image */}
       <div className="relative z-10 flex items-center justify-center opacity-25">
-        <div className="relative w-96 h-96 lg:mt-50 transition-all duration-300  hover:animate-pulse">
+        <div className="relative lg:w-96 lg:h-96 lg:mt-50 mt-25 w-48 h-48 transition-all duration-300  hover:animate-pulse">
         <img
             src="/manyohms.png"
             alt="Manyohms Background"
@@ -44,7 +44,7 @@ export default function Home() {
         </div>
 
         {/* Images Section */}
-        <div className="space-y-100 max-w-md w-full mt-100 mb-50">
+        <div className="space-y-100 max-w-md w-full mt-50 mb-50">
           <div className="w-full">
             <img
               src="/avi.JPG"
