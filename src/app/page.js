@@ -1,4 +1,3 @@
-'use client'
 import Image from "next/image";
 
 export default function Home() {
@@ -8,13 +7,13 @@ export default function Home() {
       <div className="fixed inset-0 pulse-gradient"></div>
       
       {/* Background Image */}
-      <div className="relative z-10 flex items-center justify-center opacity-30">
-        <div className="relative w-96 h-96 mt-50 hover:animate-pulse">
+      <div className="relative z-10 flex items-center justify-center opacity-25">
+        <div className="relative w-96 h-96 lg:mt-50 hover:animate-pulse">
         <Image
             src="/manyohms.png"
             alt="Manyohms Background"
             fill
-            className="object-contain select-none"
+            className="object-contain select-none pointer-events-none"
           priority
         />
         </div>
@@ -27,7 +26,7 @@ export default function Home() {
           <a
             href="https://www.youtube.com/watch?v=LTMGdUPSGY4"
             target="_blank"
-            className="block w-full transition-all duration-300  p-4  text-center border border-white/30 hover:border-white/5 underline hover:animate-pulse"
+            className="block w-full transition-all duration-300  p-4  text-center  underline hover:animate-pulse"
           >
             <div className=" script-font ">many ohms live at maann studio</div>
           </a>
@@ -42,7 +41,7 @@ export default function Home() {
           <a
             href="https://www.youtube.com/watch?v=U8-GsCQlETc"
             target="_blank"
-            className="block w-full transition-all duration-300  p-4  text-center border border-white/30 hover:border-white/50 underline hover:animate-pulse"
+            className="block w-full transition-all duration-300  p-4  text-center underline hover:animate-pulse"
           >
             <div className=" script-font ">many ohms Live at Portraits of Aufhebung</div>
           </a>
