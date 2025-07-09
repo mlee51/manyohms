@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
     <div className="min-h-screen relative">
@@ -8,14 +6,12 @@ export default function Home() {
       
       {/* Background Image */}
       <div className="relative z-10 flex items-center justify-center opacity-25">
-        <div className="relative w-96 h-96 lg:mt-50 hover:animate-pulse">
-        <Image
+        <div className="relative w-96 h-96 lg:mt-50 transition-all duration-300  hover:animate-pulse">
+        <img
             src="/manyohms.png"
             alt="Manyohms Background"
-            fill
             className="object-contain select-none pointer-events-none"
-          priority
-        />
+          />
         </div>
       </div>
       
@@ -48,23 +44,19 @@ export default function Home() {
         </div>
 
         {/* Images Section */}
-        <div className="space-y-20 max-w-md w-full mt-20">
+        <div className="space-y-100 max-w-md w-full mt-100 mb-50">
           <div className="w-full">
-          <Image
-              src="/avi.jpg"
+            <img
+              src="/avi.JPG"
               alt="Avi"
-              width={400}
-              height={300}
-              className="w-full h-auto "
+              className="w-full h-auto"
             />
           </div>
           <div className="w-full">
-          <Image
-              src="/michael.jpg"
+            <img
+              src="/michael.JPG"
               alt="Michael"
-              width={400}
-              height={300}
-              className="w-full h-auto "
+              className="w-full h-auto"
             />
           </div>
         </div>
@@ -75,7 +67,7 @@ export default function Home() {
         <div className="flex justify-center">
           <a
             href="https://www.instagram.com/manyohms"
-          target="_blank"
+            target="_blank"
             className=" hover:text-gray-800 transition-colors duration-300 hover:animate-pulse"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
