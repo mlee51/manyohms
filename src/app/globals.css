@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #00000039;
 }
 
 @theme inline {
@@ -23,4 +23,50 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Script font for elegant text */
+.script-font {
+  font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  font-style: italic;
+}
+
+/* CSS Custom Properties for gradient animation */
+@property --yellow-intensity {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 100%;
+}
+
+@property --yellow-opacity {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 1;
+}
+
+.pulse-gradient {
+  --yellow-intensity: 100%;
+  --yellow-opacity: 1;
+  background: radial-gradient(circle at center, 
+    rgba(255, 247, 11, var(--yellow-opacity)) 0%, 
+    rgba(255, 247, 11, calc(var(--yellow-opacity) * 0.8)) 25%, 
+    rgba(255, 247, 11, calc(var(--yellow-opacity) * 0.4)) 50%, 
+    #ffffff 75%, 
+    #ffffff 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  animation: pulse-yellow 4s ease-in-out infinite;
+}
+
+@keyframes pulse-yellow {
+  0% {
+    --yellow-opacity: 1;
+  }
+  50% {
+    --yellow-opacity: 0.3;
+  }
+  100% {
+    --yellow-opacity: 1;
+  }
 }
